@@ -1,3 +1,7 @@
+# Common git push aliases
+alias gpd='git push origin develop'
+alias gpm='git push origin master'
+
 # Set custom prompt
 setopt PROMPT_SUBST
 autoload -U promptinit
