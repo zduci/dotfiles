@@ -1,5 +1,8 @@
 . ~/bin/bash_colors.sh
 
+# Use vi on command line
+set -o vi
+
 # Add paths that should have been there by default
 export PATH=${PATH}:/usr/local/bin
 export PATH="~/bin:$PATH"
