@@ -396,3 +396,7 @@ nnoremap <leader>D :tabclose<cr>
 
 set foldmethod=manual
 set nofoldenable
+
+" Don't jump over wrapped lines
+:nmap j gj
+:nmap k gk
