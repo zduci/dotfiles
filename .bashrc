@@ -3,6 +3,10 @@
 # Use vi on command line
 set -o vi
 
+# Common git push aliases
+alias gpd='git push origin develop'
+alias gpm='git push origin master'
+
 # Add paths that should have been there by default
 export PATH=${PATH}:/usr/local/bin
 export PATH="~/bin:$PATH"
