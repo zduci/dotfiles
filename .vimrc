@@ -400,3 +400,6 @@ set nofoldenable
 " Don't jump over wrapped lines
 :nnoremap j gj
 :nnoremap k gk
+
+" Paste mode
+nnoremap \o :set paste!<cr>
