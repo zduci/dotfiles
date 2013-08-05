@@ -46,3 +46,6 @@
 [merge]
     tool = vimdiff
 
+[color "status"]
+  changed = yellow
+  untracked = yellow
