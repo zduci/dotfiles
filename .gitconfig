@@ -48,4 +48,4 @@
 
 [color "status"]
   changed = yellow
-  untracked = yellow
+  untracked = bold red
