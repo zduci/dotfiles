@@ -403,3 +403,6 @@ set nofoldenable
 
 " Paste mode
 nnoremap \o :set paste!<cr>
+
+" Show line numbers
+nnoremap \l :setlocal number!<cr>
