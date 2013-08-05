@@ -406,3 +406,11 @@ nnoremap \o :set paste!<cr>
 
 " Show line numbers
 nnoremap \l :setlocal number!<cr>
+
+" Return to previous buffer
+nnoremap <C-e> :e#<cr>
+
+" Scroll through open buffers
+nnoremap <C-n> :bnext<CR>
+nnoremap <C-p> :bprev<CR>
+
