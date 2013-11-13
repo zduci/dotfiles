@@ -2,6 +2,9 @@
 alias gpd='git push origin develop'
 alias gpm='git push origin master'
 
+# Open last migration in vim
+alias mi='ls db/migrate/* | tail -n1 | xargs "vi"'
+
 # Set custom prompt
 setopt PROMPT_SUBST
 autoload -U promptinit
