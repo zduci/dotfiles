@@ -1,5 +1,8 @@
 . ~/bin/bash_colors.sh
 
+# Bundle exec alias
+alias be='bundle exec'
+
 # Use vi on command line
 set -o vi
 
