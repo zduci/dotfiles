@@ -6,6 +6,9 @@ alias be='bundle exec'
 # Start foreman alias
 alias bef='bundle exec foreman start'
 
+# Start rails console alias
+alias bec='bundle exec rails c'
+
 # Use vi on command line
 set -o vi
 

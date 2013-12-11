@@ -4,6 +4,9 @@ alias be='bundle exec'
 # Start foreman alias
 alias bef='bundle exec foreman start'
 
+# Start rails console alias
+alias bec='bundle exec rails c'
+
 # Common git push aliases
 alias gpd='git push origin develop'
 alias gpm='git push origin master'
