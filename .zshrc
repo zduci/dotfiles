@@ -125,3 +125,4 @@ PATH=$PATH:$HOME/.rvm/bin
 # Use vim on the prompt
 bindkey -v
 
+[ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh
