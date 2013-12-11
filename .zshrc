@@ -1,6 +1,9 @@
 # Bundle exec alias
 alias be='bundle exec'
 
+# Start foreman alias
+alias bef='bundle exec foreman start'
+
 # Common git push aliases
 alias gpd='git push origin develop'
 alias gpm='git push origin master'

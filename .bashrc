@@ -3,6 +3,9 @@
 # Bundle exec alias
 alias be='bundle exec'
 
+# Start foreman alias
+alias bef='bundle exec foreman start'
+
 # Use vi on command line
 set -o vi
 
