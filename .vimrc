@@ -414,3 +414,5 @@ nnoremap <C-e> :e#<cr>
 nnoremap <C-n> :bnext<CR>
 nnoremap <C-p> :bprev<CR>
 
+" Open NERDTree
+nnoremap <leader>m :NERDTree<CR>
