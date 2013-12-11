@@ -1,3 +1,6 @@
+# Bundle exec alias
+alias be='bundle exec'
+
 # Common git push aliases
 alias gpd='git push origin develop'
 alias gpm='git push origin master'
