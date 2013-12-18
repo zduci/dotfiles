@@ -1,3 +1,6 @@
+# Shit happens
+alias gti='git'
+
 # Bundle exec alias
 alias be='bundle exec'
 
