@@ -1,5 +1,8 @@
 . ~/bin/bash_colors.sh
 
+# tmux <3
+alias tmux="TERM=screen-256color-bce tmux"
+
 # Shit happens
 alias gti='git'
 
