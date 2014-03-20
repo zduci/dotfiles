@@ -314,9 +314,9 @@ nnoremap <leader>. :call OpenTestAlternate()<cr>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " RUNNING TESTS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-map <leader>t :silent call RunTestFile()<cr>
-map <leader>T :silent call RunNearestTest()<cr>
-map <leader>a :silent call RunTests('')<cr>
+map <leader>t :call RunTestFile()<cr>
+map <leader>T :call RunNearestTest()<cr>
+map <leader>a :call RunTests('')<cr>
 map <leader>c :w\|:silent !script/features<cr>
 map <leader>w :w\|:silent !script/features --profile wip<cr>
 
@@ -335,6 +335,7 @@ function! RunTestFile(...)
         return
     end
     call RunTests(t:grb_test_file . command_suffix)
+    redraw!
 endfunction
 
 function! RunNearestTest()
@@ -358,9 +359,9 @@ function! RunTests(filename)
         if filereadable("script/test")
             exec ":!script/test " . a:filename
         elseif filereadable("Gemfile")
-            exec ":!bundle exec rspec --color " . a:filename
+            exec ":!bundle exec rspec " . a:filename
         else
-            exec ":!rspec --color " . a:filename
+            exec ":!rspec " . a:filename
         end
     end
 endfunction
