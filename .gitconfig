@@ -42,6 +42,7 @@
     ra = !git r --all
     l = "!. ~/.githelpers && pretty_git_log"
     la = !git l --all
+	undo = reset --soft HEAD^
 
 [merge]
     tool = vimdiff
