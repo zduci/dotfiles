@@ -20,6 +20,9 @@ alias gpm='git push origin master'
 # Open last migration in vim
 alias mi='ls db/migrate/* | tail -n1 | xargs "vi"'
 
+# Commit changelog
+alias gclog='git commit -m "Updates the CHANGELOG" CHANGELOG.md'
+
 # Set custom prompt
 setopt PROMPT_SUBST
 autoload -U promptinit
