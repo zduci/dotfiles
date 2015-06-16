@@ -419,3 +419,7 @@ nnoremap <C-p> :bprev<CR>
 
 " Open NERDTree
 nnoremap <leader>m :NERDTree<CR>
+
+" Line size capped to 80
+highlight ColorColumn ctermbg=darkred
+call matchadd('ColorColumn', '\%81v', 100)
