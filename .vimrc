@@ -421,5 +421,5 @@ nnoremap <C-p> :bprev<CR>
 nnoremap <leader>m :NERDTree<CR>
 
 " Line size capped to 80
-highlight ColorColumn ctermbg=darkred
-call matchadd('ColorColumn', '\%81v', 100)
+autocmd FileType ruby highlight ColorColumn ctermbg=darkred
+autocmd FileType ruby call matchadd('ColorColumn', '\%81v', 100)
