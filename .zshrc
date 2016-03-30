@@ -142,8 +142,3 @@ PATH=$PATH:$HOME/.rvm/bin
 
 # Use vim on the prompt
 bindkey -v
-
-[ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh
-# Source nvm and chose node version
-node_version="v0.10"
-nodenv global $node_version
