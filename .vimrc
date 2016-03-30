@@ -3,7 +3,7 @@
 
 autocmd!
 
-call pathogen#incubate()
+call pathogen#infect('bundle/{}')
 
 " Disable bell
 set noerrorbells visualbell t_vb=
