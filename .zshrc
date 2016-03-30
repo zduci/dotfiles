@@ -136,9 +136,9 @@ function up()
     test $DIR != "/" && echo $DIR/$TARGET
 }
 
-# Initialize RVM
-PATH=$PATH:$HOME/.rvm/bin
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-
 # Use vim on the prompt
 bindkey -v
+
+# Using rbenv
+export PATH="$HOME/.rbenv/bin:$PATH"                                                                                                                                                                                 
+eval "$(rbenv init -)"
