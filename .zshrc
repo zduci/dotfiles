@@ -142,3 +142,8 @@ bindkey -v
 # Using rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"                                                                                                                                                                                 
 eval "$(rbenv init -)"
+
+# Fix git autocomplete
+__git_files () {
+  _wanted files expl 'local files' _files
+}
