@@ -103,7 +103,7 @@ augroup END
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 :set t_Co=256 " 256 colors
 :set background=dark
-:color solarized
+:color grb256
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " STATUS LINE
@@ -426,3 +426,6 @@ autocmd FileType ruby call matchadd('ColorColumn', '\%81v', 100)
 
 " Disable swap files
 set noswapfile
+
+" Use jk iunstead of esc
+imap jk <Esc>
