@@ -423,3 +423,6 @@ nnoremap <leader>m :NERDTree<CR>
 " Line size capped to 80
 autocmd FileType ruby highlight ColorColumn ctermbg=darkred
 autocmd FileType ruby call matchadd('ColorColumn', '\%81v', 100)
+
+" Disable swap files
+set noswapfile
