@@ -318,6 +318,8 @@ map <leader>a :call RunTests('')<cr>
 map <leader>c :w\|:silent !script/features<cr>
 map <leader>w :w\|:silent !script/features --profile wip<cr>
 
+map <leader>j :call RunJest()<cr>
+
 function! RunTestFile(...)
     if a:0
         let command_suffix = a:1
@@ -362,6 +364,10 @@ function! RunTests(filename)
             exec ":!rspec " . a:filename
         end
     end
+endfunction
+
+function! RunJest()
+  exec ":!jest"
 endfunction
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
