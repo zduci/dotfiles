@@ -435,3 +435,6 @@ set noswapfile
 
 " Use jk iunstead of esc
 imap jk <Esc>
+
+" Use ctrlp
+set runtimepath^=~/.vim/bundle/ctrlp.vim
