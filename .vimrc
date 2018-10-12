@@ -438,3 +438,6 @@ imap jk <Esc>
 
 " Use ctrlp
 set runtimepath^=~/.vim/bundle/ctrlp.vim
+
+nnoremap <leader>f :CtrlP<CR>
+nnoremap <leader>b :CtrlPBuffer<CR>
