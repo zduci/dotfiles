@@ -64,6 +64,7 @@ export WORDCHARS='*?[]~&;!$%^<>'
 
 # Highlight search results in ack.
 export ACK_COLOR_MATCH='red'
+alias ag="ag --color-match 31"
 
 # Aliases
 t() {
