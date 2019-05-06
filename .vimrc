@@ -143,7 +143,7 @@ call MapCR()
 nnoremap <leader><leader> <c-^>
 " Close all other windows, open a vertical split, and open this file's test
 " alternate in it.
-nnoremap <leader>s :call FocusOnFile()<cr>
+nnoremap <leader>zf :call FocusOnFile()<cr>
 function! FocusOnFile()
   tabnew %
   normal! v
@@ -320,6 +320,29 @@ function! AlternateForCurrentFile()
   return new_file
 endfunction
 nnoremap <leader>. :call OpenTestAlternate()<cr>
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" SWITCH BETWEEN index.js AND style.css
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+nnoremap <leader>s :call OpenStylesheetOrComponent()<cr>
+
+function! OpenStylesheetOrComponent()
+  let new_file = StylesheetOrComponent()
+  exec ':e ' . new_file
+endfunction
+function! StylesheetOrComponent()
+  let current_file = expand("%")
+  let new_file = current_file
+  let in_style = match(current_file, 'style\.css$') != -1
+  let going_to_component = !in_style
+  if going_to_component
+    let new_file = substitute(new_file, 'index\.js$', 'style\.css', '')
+  else
+    let new_file = substitute(new_file, 'style\.css$', 'index\.js', '')
+  endif
+  return new_file
+endfunction
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " RUNNING TESTS
