@@ -3,7 +3,19 @@
 
 autocmd!
 
-call pathogen#infect('bundle/{}')
+execute pathogen#infect()
+
+call plug#begin()
+
+Plug 'pangloss/vim-javascript'
+Plug 'maxmellon/vim-jsx-pretty'
+
+Plug '/usr/local/opt/fzf'
+Plug 'junegunn/fzf.vim'
+
+Plug 'jesseleite/vim-agriculture'
+
+call plug#end()
 
 " Disable bell
 set noerrorbells visualbell t_vb=
