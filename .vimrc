@@ -432,8 +432,8 @@ command! InsertTime :normal a<c-r>=strftime('%F %H:%M:%S.0 %z')<cr>
 command! FindConditionals :normal /\<if\>\|\<unless\>\|\<and\>\|\<or\>\|||\|&&<cr>
 
 command! GdiffInTab tabedit %|vsplit|Gdiff
-nnoremap <leader>d :GdiffInTab<cr>
-nnoremap <leader>D :tabclose<cr>
+nnoremap <leader>dd :GdiffInTab<cr>
+nnoremap <leader>DD :tabclose<cr>
 
 set foldmethod=manual
 set nofoldenable
@@ -473,6 +473,7 @@ set runtimepath^=~/.vim/bundle/ctrlp.vim
 
 nnoremap <leader>f :CtrlP<CR>
 nnoremap <leader>b :CtrlPBuffer<CR>
+map <leader>d :AgRaw 
 
 nnoremap <leader>w :bdelete<CR>
 
