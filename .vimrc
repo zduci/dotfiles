@@ -331,12 +331,18 @@ endfunction
 function! StylesheetOrComponent()
   let current_file = expand("%")
   let new_file = current_file
-  let in_style = match(current_file, 'style\.css$') != -1
-  let going_to_component = !in_style
-  if going_to_component
-    let new_file = substitute(new_file, 'index\.js$', 'style\.css', '')
-  else
+  let in_style_css = match(current_file, 'style\.css$') != -1
+  if in_style_css
     let new_file = substitute(new_file, 'style\.css$', 'index\.js', '')
+  else
+    let in_style_js = match(current_file, 'style\.js$') != -1
+    if in_style_js
+      let new_file = substitute(new_file, 'style\.js$', 'index\.js', '')
+    elseif filereadable(substitute(new_file, 'index\.js$', 'style\.css', ''))
+      let new_file = substitute(new_file, 'index\.js$', 'style\.css', '')
+    else
+      let new_file = substitute(new_file, 'index\.js$', 'style\.js', '')
+    endif
   endif
   return new_file
 endfunction
