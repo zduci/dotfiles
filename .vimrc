@@ -23,7 +23,9 @@ Plug 'slim-template/vim-slim'
 Plug 'mxw/vim-jsx'
 Plug 'pangloss/vim-javascript'
 
+" Color schemes
 Plug 'morhetz/gruvbox'
+Plug 'chriskempson/base16-vim'
 
 call plug#end()
 
@@ -216,7 +218,10 @@ augroup END
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 :set t_Co=256 " 256 colors
 ":color grb24bit
-:color gruvbox
+":color gruvbox
+"colorscheme base16-tomorrow-night
+"colorscheme base16-ashes
+colorscheme base16-default-dark
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " STATUS LINE
