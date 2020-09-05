@@ -19,16 +19,11 @@ Plug 'slim-template/vim-slim'
 " Plug 'zivyangll/git-blame.vim'
 
 " JavaScript
-"Plug 'chemzqm/vim-jsx-improve'
-
+" Plug 'chemzqm/vim-jsx-improve'
+Plug 'mxw/vim-jsx'
 Plug 'pangloss/vim-javascript'
-Plug 'maxmellon/vim-jsx-pretty'
 
 Plug 'morhetz/gruvbox'
-
-" Plug 'HerringtonDarkholme/yats.vim'
-" Plug 'peitalin/vim-jsx-typescript'
-" Plug 'ianks/vim-tsx'
 
 call plug#end()
 
@@ -214,14 +209,13 @@ augroup vimrcEx
   " filetypes lets the installed plugins deal with JSX/TSX instead.
   autocmd bufnewfile,bufread *.tsx set filetype=typescript.tsx
   autocmd bufnewfile,bufread *.jsx set filetype=javascript.jsx
-  autocmd bufnewfile,bufread *.js set filetype=javascript.js
 augroup END
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " COLOR
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 :set t_Co=256 " 256 colors
-":color grb256
+":color grb24bit
 :color gruvbox
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -734,3 +728,5 @@ nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 let g:prettier#autoformat = 1
 let g:prettier#autoformat_require_pragma = 0
 map <leader>q :Prettier<CR>
+
+let g:jsx_ext_required = 0
