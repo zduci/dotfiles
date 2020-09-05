@@ -730,3 +730,6 @@ let g:prettier#autoformat_require_pragma = 0
 map <leader>q :Prettier<CR>
 
 let g:jsx_ext_required = 0
+
+" Clear search highlight when hitting return
+nnoremap <silent> <return> :noh<cr><esc>
