@@ -1,6 +1,12 @@
 # tmux <3
 alias tmux="TERM=screen-256color-bce tmux"
 
+# Kill vims
+alias kl='killall -9 vim'
+
+# Where do we keep the gems again?
+alias gems='gem environment'
+
 # Shit happens
 alias gti='git'
 
@@ -12,6 +18,41 @@ alias bef='bundle exec foreman start'
 
 # Start rails console alias
 alias bec='bundle exec rails c'
+
+# Start rails console alias
+alias bec='bundle exec rails c'
+alias nightwatch='./node_modules/.bin/nightwatch'
+
+alias nd='open "rndebugger://set-debugger-loc?host=localhost&port=19001"'
+
+alias deploy_stg='git push heroku-stg HEAD:master -f'
+alias deploy_prod='git push heroku-prod master'
+
+alias publish_staging='expo publish --release-channel staging'
+alias publish_v1='expo publish --release-channel staging-v1'
+alias publish_prod='expo publish --release-channel prod-v1'
+alias build_ios='expo build:ios --release-channel staging-v1'
+alias build_ios_prod='expo build:ios --release-channel prod-v1'
+alias build_android='expo build:android --release-channel staging-v1'
+alias build_android_prod='expo build:android --release-channel prod-v1'
+alias build_ios_local='expo build:ios --release-channel localhost'
+alias build_android_local='expo build:android --release-channel localhost'
+
+click_ios() {
+  xcrun simctl openurl booted "exp://127.0.0.1:19000/--/$1"
+}
+
+click_ios_expo() {
+  xcrun simctl openurl booted "exp://exp.host/@community/with-webbrowser-redirect/--/$1"
+}
+
+click_android() {
+  adb shell am start -a "android.intent.action.VIEW" -d "exp://192.168.0.20:19000/--/$1"
+}
+
+alias kill_spring="ps ax | grep spring | cut -f1 -d' ' | xargs kill"
+
+alias start_docker="docker-sync-stack start"
 
 # Common git push aliases
 alias gpd='git push origin develop'
@@ -36,6 +77,11 @@ compinit
 # Add paths
 export PATH=/usr/local/sbin:/usr/local/bin:${PATH}
 export PATH="$HOME/bin:$PATH"
+export PATH="$HOME/Library/Python/2.7/bin:$PATH"
+export PATH="/usr/local/bin/vim:$PATH"
+
+export ANDROID_SDK=/Users/myuser/Library/Android/sdk
+export PATH=/Users/myuser/Library/Android/sdk:$PATH
 
 # Colorize terminal
 alias ls='ls -G'
@@ -148,3 +194,19 @@ eval "$(rbenv init -)"
 __git_files () {
   _wanted files expl 'local files' _files
 }
+
+
+export CURL_SSL_BACKEND=secure-transport
+# https://github.com/Homebrew/brew/issues/6274#issuecomment-507937736
+export HOMEBREW_NO_ENV_FILTERING=1
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
+
+
+export ANDROID_HOME="$HOME/Library/Android/Sdk"
+export PATH="$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools:$PATH"
+export PATH=$PATH:/Applications/MySQLWorkbench.app/Contents/MacOS
+export PATH=./node_modules/.bin:$PATH
+
+export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
