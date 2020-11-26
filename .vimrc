@@ -497,6 +497,8 @@ function! RunTests(filename)
     else
         if filereadable("script/test")
             exec ":!script/test " . a:filename
+        elseif filereadable("Dockerfile")
+            exec ":!docker-compose exec -e "RAILS_ENV=test" api bundle exec rspec " . a:filename
         elseif filereadable("Gemfile")
             exec ":!bundle exec rspec " . a:filename
         else
