@@ -52,7 +52,10 @@ click_android() {
 
 alias kill_spring="ps ax | grep spring | cut -f1 -d' ' | xargs kill"
 
-alias start_docker="docker-sync-stack start"
+alias ds="docker-sync-stack start"
+alias db="docker attach zeneducate_api_v1_api_1"
+alias sk="docker attach zeneducate_api_v1_sidekiq_1"
+alias rc="docker-compose exec api rails c"
 
 # Common git push aliases
 alias gpd='git push origin develop'
