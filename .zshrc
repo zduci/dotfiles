@@ -56,6 +56,10 @@ alias ds="docker-sync-stack start"
 alias db="docker attach zeneducate_api_v1_api_1"
 alias sk="docker attach zeneducate_api_v1_sidekiq_1"
 alias rc="docker-compose exec api rails c"
+alias de="docker-compose exec api"
+alias se="docker-compose exec -e \"DISABLE_DATABASE_ENVIRONMENT_CHECK=1\" api bundle exec rake db:seed"
+alias dmi="docker-compose exec api bundle exec rake db:migrate"
+alias bd="docker-compose exec api bundle"
 
 # Common git push aliases
 alias gpd='git push origin develop'
