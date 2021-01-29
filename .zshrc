@@ -86,6 +86,7 @@ export PATH=/usr/local/sbin:/usr/local/bin:${PATH}
 export PATH="$HOME/bin:$PATH"
 export PATH="$HOME/Library/Python/2.7/bin:$PATH"
 export PATH="/usr/local/bin/vim:$PATH"
+export PATH="/usr/local/lib/ruby/gems/2.7.0/bin:$PATH"
 
 export ANDROID_SDK=/Users/myuser/Library/Android/sdk
 export PATH=/Users/myuser/Library/Android/sdk:$PATH
