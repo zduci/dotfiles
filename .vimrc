@@ -1,6 +1,15 @@
 " remove all existing autocmds
 autocmd!
 
+let g:coc_global_extensions = [
+            \ 'coc-pairs',
+            \ 'coc-prettier',
+            \ 'coc-json',
+            \ 'coc-solargraph',
+            \ 'coc-tsserver',
+            \ ]
+
+
 call plug#begin()
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -10,9 +19,9 @@ Plug 'junegunn/fzf.vim'
 
 Plug 'jesseleite/vim-agriculture'
 
-Plug 'prettier/vim-prettier', {
-  \ 'do': 'yarn install',
-  \ 'for': ['javascript', 'typescript', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
+"Plug 'prettier/vim-prettier', {
+"  \ 'do': 'yarn install',
+"  \ 'for': ['javascript', 'typescript', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
 
 Plug 'vim-ruby/vim-ruby'
 Plug 'slim-template/vim-slim'
@@ -219,9 +228,9 @@ augroup END
 :set t_Co=256 " 256 colors
 ":color grb24bit
 ":color gruvbox
-"colorscheme base16-tomorrow-night
+colorscheme base16-tomorrow-night
 "colorscheme base16-ashes
-colorscheme base16-default-dark
+"colorscheme base16-default-dark
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " STATUS LINE
@@ -498,7 +507,7 @@ function! RunTests(filename)
         if filereadable("script/test")
             exec ":!script/test " . a:filename
         elseif filereadable("Dockerfile")
-            exec ":!docker-compose exec -e "RAILS_ENV=test" api bundle exec rspec " . a:filename
+            exec ":!docker-compose exec -e \"RAILS_ENV=test\" api bundle exec rspec " . a:filename
         elseif filereadable("Gemfile")
             exec ":!bundle exec rspec " . a:filename
         else
@@ -585,7 +594,6 @@ nnoremap <leader>w :bdelete<CR>
 
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 
-
 " coc config
 set nobackup
 set nowritebackup
@@ -598,6 +606,8 @@ if has("patch-8.1.1564")
 else
   set signcolumn=yes
 endif
+
+command! -nargs=0 Prettier :CocCommand prettier.formatFile
 
 " Use tab for trigger completion with characters ahead and navigate.
 " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
@@ -732,9 +742,9 @@ nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 
 
 
-let g:prettier#autoformat = 1
-let g:prettier#autoformat_require_pragma = 0
-map <leader>q :Prettier<CR>
+"let g:prettier#autoformat = 1
+"let g:prettier#autoformat_require_pragma = 0
+"map <leader>q :Prettier<CR>
 
 let g:jsx_ext_required = 0
 
