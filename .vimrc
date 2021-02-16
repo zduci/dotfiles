@@ -19,6 +19,8 @@ Plug 'junegunn/fzf.vim'
 
 Plug 'jesseleite/vim-agriculture'
 
+Plug 'francoiscabrol/ranger.vim'
+
 "Plug 'prettier/vim-prettier', {
 "  \ 'do': 'yarn install',
 "  \ 'for': ['javascript', 'typescript', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
@@ -593,6 +595,10 @@ nnoremap <leader>w :bdelete<CR>
 
 
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
+
+" ranger config
+let g:ranger_map_keys = 0
+map <leader>r :Ranger<CR>
 
 " coc config
 set nobackup
