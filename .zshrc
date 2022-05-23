@@ -213,7 +213,6 @@ __git_files () {
 
 export CURL_SSL_BACKEND=secure-transport
 # https://github.com/Homebrew/brew/issues/6274#issuecomment-507937736
-export HOMEBREW_NO_ENV_FILTERING=1
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
