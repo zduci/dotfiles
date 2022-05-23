@@ -1,3 +1,4 @@
+
 # tmux <3
 alias tmux="TERM=screen-256color-bce tmux"
 
@@ -60,6 +61,10 @@ alias de="docker-compose exec api"
 alias se="docker-compose exec -e \"DISABLE_DATABASE_ENVIRONMENT_CHECK=1\" api bundle exec rake db:seed"
 alias dmi="docker-compose exec api bundle exec rake db:migrate"
 alias bd="docker-compose exec api bundle"
+
+# Change mouse speed - 5 seems to work well
+alias getms="defaults read -g com.apple.mouse.scaling"
+alias setms="defaults write -g com.apple.mouse.scaling"
 
 # Common git push aliases
 alias gpd='git push origin develop'
