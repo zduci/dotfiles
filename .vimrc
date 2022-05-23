@@ -9,12 +9,11 @@ let g:coc_global_extensions = [
             \ 'coc-tsserver',
             \ ]
 
-
 call plug#begin()
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-Plug '/usr/local/opt/fzf'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
 Plug 'jesseleite/vim-agriculture'
@@ -38,6 +37,8 @@ Plug 'pangloss/vim-javascript'
 Plug 'morhetz/gruvbox'
 Plug 'chriskempson/base16-vim'
 
+Plug 'ruby-formatter/rufo-vim'
+
 call plug#end()
 
 " Disable bell
@@ -47,6 +48,9 @@ autocmd GUIEnter * set visualbell t_vb=
 nmap <Leader>/ <Plug>AgRawSearch
 vmap <Leader>/ <Plug>AgRawVisualSelection
 nmap <Leader>* <Plug>AgRawWordUnderCursor
+
+" Enable rufo (RUby FOrmat)
+"let g:rufo_auto_formatting = 1
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -591,8 +595,9 @@ imap jk <Esc>
 " Use ctrlp
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 
-nnoremap <leader>f :CtrlP<CR>
-nnoremap <leader>b :CtrlPBuffer<CR>
+" Fuzzy finder fzf
+nnoremap <leader>f :GFiles<CR>
+nnoremap <leader>b :Buffers<CR>
 map <leader>d :AgRaw 
 
 nnoremap <leader>w :bdelete<CR>
