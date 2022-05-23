@@ -67,6 +67,9 @@ alias getms="defaults read -g com.apple.mouse.scaling"
 alias setms="defaults write -g com.apple.mouse.scaling"
 
 # Common git push aliases
+alias pl='git pull origin $(git rev-parse --abbrev-ref HEAD)'
+alias po='git push -u origin HEAD'
+
 alias gpd='git push origin develop'
 alias gpm='git push origin master'
 
