@@ -220,5 +220,3 @@ export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
 export ANDROID_HOME="$HOME/Library/Android/Sdk"
 export PATH="$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools:$PATH"
 export PATH=$PATH:/Applications/MySQLWorkbench.app/Contents/MacOS
-
-export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
